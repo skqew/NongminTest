@@ -80,16 +80,16 @@ class ForecastViewController: UIViewController {
     // 마지막페이지에 next버튼 막기, 첫페이지에 prev버튼 막기, 아니면 true 함수
     func enabledBtn() {
         if currentPage == 0 {
-            prevBtn.isEnabled = true
-            backBtn.isEnabled = false
+            prevBtn.isEnabled = false
+            backBtn.isEnabled = true
             prevBtn.titleLabel?.tintColor = .black
             backBtn.titleLabel?.tintColor = .white
             prevBtn.backgroundColor = .white
             backBtn.backgroundColor = .systemBlue
             
         } else {
-            prevBtn.isEnabled = false
-            backBtn.isEnabled = true
+            prevBtn.isEnabled = true
+            backBtn.isEnabled = false
             prevBtn.titleLabel?.tintColor = .white
             backBtn.titleLabel?.tintColor = .black
             prevBtn.backgroundColor = .systemBlue

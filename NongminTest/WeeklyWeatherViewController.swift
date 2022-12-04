@@ -34,7 +34,10 @@ class WeeklyWeatherViewController: UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 17
+        if self.xmlDictArr.count < 8{
+            return self.xmlDictArr.count+1
+        }
+        return 9
         
     }
     
@@ -80,11 +83,12 @@ class WeeklyWeatherViewController: UIViewController, UICollectionViewDelegate, U
             cell.wl_Tmn_label.text = "최저기온(℃)"
             cell.wl_PciM_label.text = "오전 강수확률(%)"
             cell.wl_PciA_label.text = "오전 강수확률(%)"
-            
-            //            cell.wf_Ws_label.widthAnchor.constraint(equalToConstant: 100).isActive = true
-            
+                        
         } else {
             
+//            if indexPath.row > self.xmlDictArr.count {
+//                return cell
+//            }
             //            DispatchQueue.main.async {
             let item = self.xmlDictArr[(indexPath.row)-1]
             

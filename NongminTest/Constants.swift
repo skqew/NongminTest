@@ -15,6 +15,6 @@ enum XMLKey: String {
 
 struct Constants {
     
-    static let url = ""
+    static let url = "http://20.200.184.193/api/HourlyWeather.do?lon=126.899318&lat=37.534898"
     
 }
